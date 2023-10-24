@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CSPApplication</string>
+    <string name="main_title">Title</string>
+    <string name="continue_button">continue</string>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white">
+
+    <!-- 标题部分 -->
+    <TextView
+            android:text="@string/main_title"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:background="@color/color_primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:padding="12sp"/>
+
+    <!-- 滚动视图部分 -->
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+        <!-- 内部内容 -->
+        <LinearLayout
+                android:id="@+id/recyclerViewContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- 按钮部分（固定在底部） -->
+    <Button
+            android:text="@string/continue_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addRecyclerViewButton"/>
+</LinearLayout>
