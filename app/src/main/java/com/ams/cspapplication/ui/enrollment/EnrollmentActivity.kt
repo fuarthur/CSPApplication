@@ -1,9 +1,12 @@
 package com.ams.cspapplication.ui.enrollment
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.ams.cspapplication.R
+import com.ams.cspapplication.ui.courseRegistration.CourseRegistration
+
 class EnrollmentActivity : AppCompatActivity() {
     private lateinit var titleTextView: TextView
     private lateinit var introTextView: TextView
@@ -29,12 +32,21 @@ class EnrollmentActivity : AppCompatActivity() {
         option4 = findViewById(R.id.option4)
         continueButton = findViewById(R.id.continueButton)
 
-        // 设置标题文本
-        titleTextView.text = getString(R.string.title_game_enrollment)
+        selectTemplate()
 
-        // 设置中间内容部分文本
-        introTextView.text = getString(R.string.intro_enrollment)
+        // 设置按钮点击事件的监听器
+        continueButton.setOnClickListener {
+            if (selectedOption.isEmpty()) {
+                Toast.makeText(this, "Please select an option", Toast.LENGTH_SHORT).show()
+            } else {
+                // 处理按钮点击的逻辑，例如提交用户选择的选项
+                Toast.makeText(this, "Your choice is: $selectedOption", Toast.LENGTH_SHORT).show()
+                //navigateToCourseRegistration()
+            }
+        }
+    }
 
+    private fun selectTemplate() {
         // 设置选项部分的监听器
         optionGroup.setOnCheckedChangeListener { _, checkedId ->
             // 获取用户选择的选项
@@ -46,15 +58,11 @@ class EnrollmentActivity : AppCompatActivity() {
                 else -> ""
             }
         }
-
-        // 设置按钮点击事件的监听器
-        continueButton.setOnClickListener {
-            if (selectedOption.isEmpty()) {
-                Toast.makeText(this, "请先选择一个选项", Toast.LENGTH_SHORT).show()
-            } else {
-                // 处理按钮点击的逻辑，例如提交用户选择的选项
-                Toast.makeText(this, "你选择了：$selectedOption", Toast.LENGTH_SHORT).show()
-            }
-        }
+    }
+    private fun navigateToCourseRegistration() {
+        val intent = Intent(this, CourseRegistration::class.java)
+        intent.putExtra("template", selectedOption)
+        startActivity(intent)
+        finish()
     }
 }
