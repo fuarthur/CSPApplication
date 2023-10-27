@@ -1,4 +1,4 @@
-package com.ams.cspapplication.model
+package com.ams.cspapplication.model.studentTemplate
 
 open class Student {
     var daysInSchool: Int = 0
