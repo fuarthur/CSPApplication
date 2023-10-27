@@ -41,7 +41,7 @@ class EnrollmentActivity : AppCompatActivity() {
             } else {
                 // 处理按钮点击的逻辑，例如提交用户选择的选项
                 Toast.makeText(this, "Your choice is: $selectedOption", Toast.LENGTH_SHORT).show()
-                //navigateToCourseRegistration()
+                navigateToCourseRegistration()
             }
         }
     }

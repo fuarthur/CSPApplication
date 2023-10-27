@@ -27,7 +27,10 @@
                 android:name=".ui.enrollment.EnrollmentActivity"
                 android:theme="@style/Theme.AppCompat">
         </activity>
-
+        <activity
+                android:name=".ui.courseRegistration.CourseRegistration"
+                android:theme="@style/Theme.AppCompat">
+        </activity>
     </application>
 
 </manifest>
