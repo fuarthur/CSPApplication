@@ -1,5 +1,12 @@
 <resources>
-    <string name="app_name">CSPApplication</string>
-    <string name="main_title">Title</string>
-    <string name="continue_button">continue</string>
+    <string name="app_name">AP Simulator</string>
+    <string name="title_homepage">Homepage</string>
+    <string name="button_continue">continue</string>
+    <string name="button_start">start</string>
+    <string name="title_game_enrollment">Enrollment</string>
+    <string name="intro_enrollment">Select a student template</string>
+    <string name="student_template_1">Bookworm</string>
+    <string name="student_template_2">Artistic</string>
+    <string name="student_template_3">Techie</string>
+    <string name="student_template_4">Athlete</string>
 </resources>

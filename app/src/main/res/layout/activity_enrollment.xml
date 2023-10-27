@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+
+    <!-- 标题部分 -->
+    <TextView
+            android:text="@string/title_game_enrollment"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:background="@color/color_primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView"
+            android:padding="12sp"/>
+
+    <!-- 中间内容部分 -->
+    <TextView
+            android:text="@string/intro_enrollment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:id="@+id/app_name"
+            android:fontFamily="monospace"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:gravity="center_horizontal"
+            android:padding="12sp"
+            android:layout_below="@id/textView"
+            android:layout_above="@id/continueButton"/>
+
+    <!-- 选项部分 (4x1 GridLayout) -->
+    <RadioGroup
+            android:id="@+id/optionGrid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:rowCount="4"
+            android:columnCount="1"
+            android:layout_above="@id/continueButton"
+    >
+
+        <RadioButton
+                android:id="@+id/option1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/student_template_1"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_border"
+                android:minHeight="48dp"/>
+
+        <RadioButton
+                android:id="@+id/option2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/student_template_2"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_border"
+                android:minHeight="48dp"/>
+
+        <RadioButton
+                android:id="@+id/option3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/student_template_3"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_border"
+                android:minHeight="48dp"/>
+
+        <RadioButton
+                android:id="@+id/option4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/student_template_4"
+                android:layout_gravity="center_horizontal"
+                android:layout_margin="10dp"
+                android:textColor="@color/black"
+                android:background="@drawable/rounded_border"
+                android:minHeight="48dp"/>
+
+    </RadioGroup>
+
+    <!-- 按钮部分 (固定在底部) -->
+    <Button
+            android:text="@string/button_start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/continueButton"
+            android:layout_alignParentBottom="true"/>
+</RelativeLayout>

@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--suppress ALL -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
           xmlns:tools="http://schemas.android.com/tools">
 
@@ -21,7 +22,10 @@
         <activity
                 android:name=".ui.homepage.HomepageActivity"
                 android:theme="@style/Theme.AppCompat">
-            <!-- 其他 activity 配置 -->
+        </activity>
+        <activity
+                android:name=".ui.enrollment.EnrollmentActivity"
+                android:theme="@style/Theme.AppCompat">
         </activity>
 
     </application>

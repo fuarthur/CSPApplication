@@ -8,8 +8,8 @@
 
     <!-- 标题部分 -->
     <TextView
-            android:text="@string/main_title"
-            android:textSize="32sp"
+            android:text="@string/title_homepage"
+            android:textSize="24sp"
             android:textColor="@color/white"
             android:background="@color/color_primary"
             android:layout_width="match_parent"
@@ -17,25 +17,22 @@
             android:id="@+id/textView"
             android:padding="12sp"/>
 
-    <!-- 滚动视图部分 -->
-    <ScrollView
+    <!-- 中间内容部分 -->
+    <TextView
+            android:text="@string/app_name"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1">
-
-        <!-- 内部内容 -->
-        <LinearLayout
-                android:id="@+id/recyclerViewContainer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-        </LinearLayout>
-    </ScrollView>
+            android:id="@+id/app_name"
+            android:fontFamily="monospace"
+            android:textSize="40sp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_weight="1"/> <!-- 设置layout_weight为1 -->
 
     <!-- 按钮部分（固定在底部） -->
     <Button
-            android:text="@string/continue_button"
+            android:text="@string/button_start"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/addRecyclerViewButton"/>
+            android:id="@+id/continueButton"/>
 </LinearLayout>
