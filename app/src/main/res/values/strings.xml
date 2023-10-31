@@ -9,4 +9,12 @@
     <string name="student_template_2">Artistic</string>
     <string name="student_template_3">Techie</string>
     <string name="student_template_4">Athlete</string>
+    <string name="title_simulator">Simulator</string>
+    <string name="literature">Literature</string>
+    <string name="sciences">Sciences</string>
+    <string name="sports">Sports</string>
+    <string name="arts">Arts</string>
+    <string name="gpa">GPA</string>
+    <string name="preset_value">N/A</string>
+    <string name="day">Day</string>
 </resources>

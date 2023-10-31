@@ -5,7 +5,7 @@ import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import com.ams.cspapplication.R
-import com.ams.cspapplication.ui.courseRegistration.CourseRegistration
+import com.ams.cspapplication.ui.simulator.SimulatorActivity
 
 class EnrollmentActivity : AppCompatActivity() {
     private lateinit var titleTextView: TextView
@@ -17,7 +17,7 @@ class EnrollmentActivity : AppCompatActivity() {
     private lateinit var option4: RadioButton
     private lateinit var continueButton: Button
 
-    private var selectedOption = ""
+    private var selectedOption = -1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,12 +36,10 @@ class EnrollmentActivity : AppCompatActivity() {
 
         // 设置按钮点击事件的监听器
         continueButton.setOnClickListener {
-            if (selectedOption.isEmpty()) {
+            if (selectedOption == -1) {
                 Toast.makeText(this, "Please select an option", Toast.LENGTH_SHORT).show()
             } else {
-                // 处理按钮点击的逻辑，例如提交用户选择的选项
-                Toast.makeText(this, "Your choice is: $selectedOption", Toast.LENGTH_SHORT).show()
-                navigateToCourseRegistration()
+                navigateToSimulator()
             }
         }
     }
@@ -51,16 +49,16 @@ class EnrollmentActivity : AppCompatActivity() {
         optionGroup.setOnCheckedChangeListener { _, checkedId ->
             // 获取用户选择的选项
             selectedOption = when (checkedId) {
-                R.id.option1 -> getString(R.string.student_template_1)
-                R.id.option2 -> getString(R.string.student_template_2)
-                R.id.option3 -> getString(R.string.student_template_3)
-                R.id.option4 -> getString(R.string.student_template_4)
-                else -> ""
+                R.id.option1 -> 1
+                R.id.option2 -> 2
+                R.id.option3 -> 3
+                R.id.option4 -> 4
+                else -> -1
             }
         }
     }
-    private fun navigateToCourseRegistration() {
-        val intent = Intent(this, CourseRegistration::class.java)
+    private fun navigateToSimulator() {
+        val intent = Intent(this, SimulatorActivity::class.java)
         intent.putExtra("template", selectedOption)
         startActivity(intent)
         finish()

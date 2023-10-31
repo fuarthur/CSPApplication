@@ -1,0 +1,23 @@
+[
+  {
+    "id": 0,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [0, 0, 0, 0],
+    "description": "This is a game event 0",
+    "effects": [1, 1, 1, 1, -0.3]
+  },
+  {
+    "id": 1,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [0, 0, 0, 0],
+    "description": "This is a game event 1",
+    "effects": [0, 0, 0, 0, 0]
+  },
+  {
+    "id": 2,
+    "conditions": [1, 2],
+    "attribute": [10, 10, 10, 10],
+    "description": "This is  game event 2",
+    "effects": [0, 0, 0, 0, 0]
+  }
+]

@@ -28,7 +28,7 @@
                 android:theme="@style/Theme.AppCompat">
         </activity>
         <activity
-                android:name=".ui.courseRegistration.CourseRegistration"
+                android:name=".ui.simulator.SimulatorActivity"
                 android:theme="@style/Theme.AppCompat">
         </activity>
     </application>

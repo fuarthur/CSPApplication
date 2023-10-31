@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" xmlns:tools="http://schemas.android.com/tools"
+        android:background="@android:color/white">
+
+    <!-- 标题部分 -->
+    <TextView
+            android:text="@string/title_simulator"
+            android:textSize="24sp"
+            android:textColor="@color/white"
+            android:background="@color/color_primary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/title"
+            android:padding="12sp"/>
+    <!-- 中间内容部分 -->
+
+    <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_above="@+id/continueButton"
+            android:layout_below="@+id/title"
+            android:padding="12sp"
+            android:columnCount="2"
+            android:rowCount="5">
+
+        <TextView
+                android:id="@+id/literature"
+                android:layout_width="@dimen/grid_width"
+                android:layout_height="@dimen/grid_height"
+                android:text="@string/literature"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_column="0"
+                android:layout_row="0"/>
+        <TextView
+                android:id="@+id/literatureValue"
+                android:layout_width="@dimen/grid_width"
+                android:layout_height="@dimen/grid_height"
+                android:text="@string/preset_value"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_column="1"
+                android:layout_row="0"
+                android:gravity=""
+        />
+
+        <TextView
+                android:id="@+id/sciences"
+                android:layout_width="@dimen/grid_width"
+                android:layout_height="@dimen/grid_height"
+                android:text="@string/sciences"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_column="0"
+                android:layout_row="1"/>
+
+        <TextView
+                android:id="@+id/sciencesValue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/grid_height"
+                android:text="@string/preset_value"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_column="1"
+                android:layout_row="1"/>
+
+        <TextView
+                android:id="@+id/sports"
+                android:layout_width="@dimen/grid_width"
+                android:layout_height="@dimen/grid_height"
+                android:text="@string/sports"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_column="0"
+                android:layout_row="2"/>
+
+        <TextView
+                android:id="@+id/sportsValue"
+                android:layout_width="@dimen/grid_width"
+                android:layout_height="wrap_content"
+                android:text="@string/preset_value"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_column="1"
+                android:layout_row="2"/>
+
+        <TextView
+                android:id="@+id/arts"
+                android:layout_width="@dimen/grid_width"
+                android:layout_height="@dimen/grid_height"
+                android:text="@string/arts"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_column="0"
+                android:layout_row="3"/>
+
+        <TextView
+                android:id="@+id/artsValue"
+                android:layout_width="@dimen/grid_width"
+                android:layout_height="@dimen/grid_height"
+                android:text="@string/preset_value"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_column="1"
+                android:layout_row="3"/>
+
+        <TextView
+                android:id="@+id/gpa"
+                android:layout_width="@dimen/grid_width"
+                android:layout_height="@dimen/grid_height"
+                android:text="@string/gpa"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_column="0"
+                android:layout_row="4"/>
+
+        <TextView
+                android:id="@+id/gpaValue"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/grid_height"
+                android:text="@string/preset_value"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:layout_column="1"
+                android:layout_row="4"/>
+
+
+    </GridLayout>
+
+    <TextView
+            android:layout_marginBottom="10dp"
+            android:id="@+id/event"
+            android:layout_above="@id/continueButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/preset_value"
+            android:textSize="24sp"
+            android:textColor="@color/black"
+            android:background="@drawable/rounded_border"
+            android:paddingStart="10dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="7dp"
+            tools:ignore="RtlSymmetry"/>
+
+
+    <!-- 按钮部分 (固定在底部) -->
+    <Button
+            android:text="@string/button_continue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/continueButton"
+            android:layout_alignParentBottom="true"/>
+</RelativeLayout>
