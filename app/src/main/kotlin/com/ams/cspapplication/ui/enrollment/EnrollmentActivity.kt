@@ -8,8 +8,6 @@ import com.ams.cspapplication.R
 import com.ams.cspapplication.ui.simulator.SimulatorActivity
 
 class EnrollmentActivity : AppCompatActivity() {
-    private lateinit var titleTextView: TextView
-    private lateinit var introTextView: TextView
     private lateinit var optionGroup: RadioGroup
     private lateinit var option1: RadioButton
     private lateinit var option2: RadioButton
@@ -23,8 +21,6 @@ class EnrollmentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_enrollment)
 
-        titleTextView = findViewById(R.id.textView)
-        introTextView = findViewById(R.id.app_name)
         optionGroup = findViewById(R.id.optionGrid)
         option1 = findViewById(R.id.option1)
         option2 = findViewById(R.id.option2)

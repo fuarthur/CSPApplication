@@ -17,4 +17,7 @@
     <string name="gpa">GPA</string>
     <string name="preset_value">N/A</string>
     <string name="day">Day</string>
+    <string name="button_restart">restart</string>
+    <string name="title_final">The End</string>
+    <string name="final_statement">You got offer from</string>
 </resources>

@@ -13,7 +13,7 @@
             android:background="@color/color_primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView"
+            android:id="@+id/page_title"
             android:padding="12sp"/>
 
     <!-- 中间内容部分 -->
@@ -27,7 +27,7 @@
             android:textColor="@color/black"
             android:gravity="center_horizontal"
             android:padding="12sp"
-            android:layout_below="@id/textView"
+            android:layout_below="@id/page_title"
             android:layout_above="@id/continueButton"/>
 
     <!-- 选项部分 (4x1 GridLayout) -->

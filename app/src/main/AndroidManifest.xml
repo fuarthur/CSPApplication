@@ -31,6 +31,10 @@
                 android:name=".ui.simulator.SimulatorActivity"
                 android:theme="@style/Theme.AppCompat">
         </activity>
+        <activity
+                android:name=".ui.finalPage.FinalActivity"
+                android:theme="@style/Theme.AppCompat">
+        </activity>
     </application>
 
 </manifest>

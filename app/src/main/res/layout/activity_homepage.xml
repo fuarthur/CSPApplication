@@ -14,7 +14,7 @@
             android:background="@color/color_primary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/textView"
+            android:id="@+id/page_title"
             android:padding="12sp"/>
 
     <!-- 中间内容部分 -->

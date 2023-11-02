@@ -10,6 +10,7 @@ import com.ams.cspapplication.R
 import com.ams.cspapplication.model.gameEvent.GameEvent
 import com.ams.cspapplication.model.gameEvent.GameHelper
 import com.ams.cspapplication.model.studentTemplate.*
+import com.ams.cspapplication.ui.finalPage.FinalActivity
 import java.math.BigDecimal
 
 
@@ -69,16 +70,16 @@ class SimulatorActivity : AppCompatActivity() {
                 val eventDescription = event.description
                 val displayText = "$dayString $daysInSchool $eventDescription"
                 eventDisplay.text = displayText
-                student.literature += event.effects[0].toInt()
-                student.sciences += event.effects[1].toInt()
-                student.arts += event.effects[2].toInt()
-                student.sports += event.effects[3].toInt()
+                student.literature += event.effects[0].toInt().coerceAtLeast(0)
+                student.sciences += event.effects[1].toInt().coerceAtLeast(0)
+                student.arts += event.effects[2].toInt().coerceAtLeast(0)
+                student.sports += event.effects[3].toInt().coerceAtLeast(0)
 
                 val effect = BigDecimal(event.effects[4].toString())
                 student.GPA = (student.GPA.toBigDecimal() + effect).toDouble()
-
                 if (student.GPA > 4.0) student.GPA = 4.0
                 if (student.GPA < 2.0) isOver = true
+                if (student.daysInSchool >= 20) isOver = true
                 updateAttributes()
             }
         }
@@ -103,7 +104,8 @@ class SimulatorActivity : AppCompatActivity() {
     }
 
     private fun navigateToFinal() {
-        val intent = Intent(this, SimulatorActivity::class.java) //TODO: 结算界面
+        val intent = Intent(this, FinalActivity::class.java) //TODO: 结算界面
+        intent.putExtra("score", (student.literature+student.sciences+student.arts+student.sports)*student.GPA)
         startActivity(intent)
         finish()
     }

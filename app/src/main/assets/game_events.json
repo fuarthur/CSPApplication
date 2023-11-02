@@ -3,21 +3,224 @@
     "id": 0,
     "conditions": [1, 2, 3, 4],
     "attribute": [0, 0, 0, 0],
-    "description": "This is a game event 0",
-    "effects": [1, 1, 1, 1, -0.3]
+    "description": "You participated in a book club discussion. It was a great opportunity to enhance your literary skills and engage in intellectual conversations.",
+    "effects": [1, 0, 0, 0, 0.2]
   },
   {
     "id": 1,
-    "conditions": [1, 2, 3, 4],
+    "conditions": [2, 4],
     "attribute": [0, 0, 0, 0],
-    "description": "This is a game event 1",
-    "effects": [0, 0, 0, 0, 0]
+    "description": "You attended an art exhibition and admired the beautiful artworks. It inspired you to explore your artistic abilities.",
+    "effects": [0, 0, 0, 1, 0]
   },
   {
     "id": 2,
-    "conditions": [1, 2],
-    "attribute": [10, 10, 10, 10],
-    "description": "This is  game event 2",
+    "conditions": [1, 3],
+    "attribute": [0, 0, 0, 0],
+    "description": "You participated in a sports tournament and demonstrated excellent teamwork and athletic skills.",
+    "effects": [0, 0, 1, 0, 0]
+  },
+  {
+    "id": 3,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [0, 0, 0, 0],
+    "description": "You organized a science fair and showcased your scientific knowledge. It was a great opportunity to learn and share ideas with others.",
+    "effects": [0, 1, 0, 0, 0]
+  },
+  {
+    "id": 4,
+    "conditions": [1],
+    "attribute": [7, 7, 7, 7],
+    "description": "You aced your literature exam and received high praise from your teacher. Your hard work and dedication paid off.",
+    "effects": [0, 0, 0, 0, 0.3]
+  },
+  {
+    "id": 5,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [5, 5, 5, 5],
+    "description": "You cheated in the exam, but no one noticed.",
+    "effects": [-1, -1, -1, -1, 0.3]
+  },
+  {
+    "id": 6,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [3, 3, 3, 3],
+    "description": "You were caught cheating in the quiz",
+    "effects": [0, 0, 0, 0, -0.5]
+  },
+  {
+    "id": 7,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [0, 0, 0, 0],
+    "description": "You improved your personal abilities, but ignored your grades.",
+    "effects": [3, 3, 3, 3, -0.5]
+  },
+  {
+    "id": 8,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [0, 0, 0, 0],
+    "description": "You had a serious illness.",
+    "effects": [0, 0, 0, -3, -0.3]
+  },
+  {
+    "id": 9,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [0, 0, 5, 0],
+    "description": "You and your friends exercise every morning.",
+    "effects": [0, 0, 1, 0, 0]
+  },
+  {
+    "id": 10,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [8, 8, 3, 3],
+    "description": "You took part in the knowledge contest and got good grades.",
+    "effects": [3, 3, 0, 0, 0.3]
+  },
+  {
+    "id": 11,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [3, 3, 5, 3],
+    "description": "You and your classmates started dating, and your GPA were affected.",
+    "effects": [0, 0, 1, 1, -0.2]
+  },
+  {
+    "id": 12,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [0, 0, 0, 0],
+    "description": "The school Wi-Fi is down. It seems that your classmates did it.",
     "effects": [0, 0, 0, 0, 0]
+  },
+  {
+    "id": 13,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [0, 0, 0, 0],
+    "description": "Stay up late doing homework",
+    "effects": [0, 0, -1, -1, 0.1]
+  },
+  {
+    "id": 14,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [0, 0, 0, 0],
+    "description": "You were warned by the school for making sensitive comments online",
+    "effects": [0, 0, 0, 0, -0.5]
+  },
+  {
+    "id": 15,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [5, 5, 5, 5],
+    "description": "You received a scholarship",
+    "effects": [0, 0, 0, 0, 0.1]
+  },
+  {
+    "id": 16,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [0, 0, 0, 5],
+    "description": "You fought with your classmates at school.",
+    "effects": [0, 0, -1, 0, -0.3]
+  },
+  {
+    "id": 17,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [0, 0, 0, 5],
+    "description": "Your dream university went bankrupt.",
+    "effects": [0, 0, 0, 0, 0]
+  },
+  {
+    "id": 18,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [0, 0, 0, 5],
+    "description": "Your dream university went bankrupt.",
+    "effects": [0, 0, 0, 0, 0]
+  },
+  {
+    "id": 19,
+    "conditions": [1],
+    "attribute": [0, 0, 3, 0],
+    "description": "You made the school soccer team!",
+    "effects": [0, 0, 1, 0, 0]
+  },
+  {
+    "id": 20,
+    "conditions": [2, 4],
+    "attribute": [0, 0, 0, 4],
+    "description": "You won first place in the school art competition.",
+    "effects": [0, 0, 0, 1, 0.1]
+  },
+  {
+    "id": 21,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [0, 3, 0, 0],
+    "description": "You aced your science project and got recognition from the school.",
+    "effects": [0, 1, 0, 0, 0]
+  },
+  {
+    "id": 22,
+    "conditions": [1, 2],
+    "attribute": [0, 0, 0, 2],
+    "description": "You were selected as a lead in the school play.",
+    "effects": [0, 0, 0, 1, 0]
+  },
+  {
+    "id": 23,
+    "conditions": [3, 4],
+    "attribute": [0, 0, 4, 0],
+    "description": "You won a scholarship for your exceptional performance in a math competition.",
+    "effects": [0, 1, 0, 0, 0.2]
+  },
+  {
+    "id": 24,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [0, 0, 0, 0],
+    "description": "You made a new friend from a foreign exchange program.",
+    "effects": [0, 0, 0, 0, 0]
+  },
+  {
+    "id": 25,
+    "conditions": [3, 4],
+    "attribute": [0, 0, 3, 0],
+    "description": "You suffered a sports injury and have to take a break from your favorite sport.",
+    "effects": [0, 0, -2, 0, 0]
+  },
+  {
+    "id": 26,
+    "conditions": [1, 2],
+    "attribute": [5, 0, 0, 5],
+    "description": "You were chosen as the lead in the school's Shakespearean play.",
+    "effects": [2, 0, 0, 4, 0]
+  },
+  {
+    "id": 27,
+    "conditions": [2, 4],
+    "attribute": [0, 0, 0, 3],
+    "description": "Your artwork was featured in a local art gallery, gaining recognition from art enthusiasts.",
+    "effects": [0, 0, 0, 1, 0]
+  },
+  {
+    "id": 28,
+    "conditions": [1, 3],
+    "attribute": [0, 0, 5, 3],
+    "description": "You scored a goal in the championship soccer match, earning the admiration of your teammates and fans.",
+    "effects": [0, 0, 1, 0, 0]
+  },
+  {
+    "id": 29,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [5, 8, 0, 0],
+    "description": "You got selected for a prestigious international science fair and will represent your school.",
+    "effects": [0, 5, 0, 0, 0]
+  },
+  {
+    "id": 30,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [8, 8, 8, 8],
+    "description": "You aced all your exams this semester and your GPA improved significantly.",
+    "effects": [1, 1, 1, 1, 1.0]
+  },
+  {
+    "id": 31,
+    "conditions": [1, 2, 3, 4],
+    "attribute": [0, 0, 0, 0],
+    "description": "You were kidnapped by aliens, they have strengthened your learning ability. As a price, your physical ability is lowered",
+    "effects": [3, 3, -5, 0, 0]
   }
 ]
