@@ -34,10 +34,11 @@ class FinalActivity : ComponentActivity() {
 
     fun chooseUniversity(score: Double): String {
         return when {
-            score > 120 -> chooseRandomUniversity(listOf("Harvard, MIT, Stanford, Oxford, Johns Hopkins, Cambridge, Princeton, Cornell"))
-            score > 100 -> chooseRandomUniversity(listOf("Duke, UC Berkeley, UCLA, UCL, CIT"))
-            score > 80 -> chooseRandomUniversity(listOf("Northwest University, Rice University , The University of Notre Dame du Lac, Brown University"))
-            score > 60 -> chooseRandomUniversity(listOf("UIUC", "Case Western Reserve University", "Northeastern University", "University of Rochester", "OSU"))
+            score > 140 -> chooseRandomUniversity(listOf("Harvard, MIT, Stanford, Oxford, Johns Hopkins, Cambridge, Princeton, Cornell"))
+            score > 120 -> chooseRandomUniversity(listOf("Duke, UC Berkeley, UCLA, UCL, CIT"))
+            score > 100 -> chooseRandomUniversity(listOf("Northwest University, Rice University , The University of Notre Dame du Lac, Brown University"))
+            score > 80 -> chooseRandomUniversity(listOf("UIUC", "Case Western Reserve University", "Northeastern University", "University of Rochester", "OSU"))
+            score > 60 -> chooseRandomUniversity(listOf("XDF"))
             else -> "No university"
         }
     }
