@@ -74,16 +74,15 @@ class SimulatorActivity : AppCompatActivity() {
                 val eventDescription = event.description
                 val displayText = "$dayString $daysInSchool $eventDescription"
                 eventDisplay.text = displayText
-                student.literature += event.effects[0].toInt().coerceAtLeast(0)
-                student.sciences += event.effects[1].toInt().coerceAtLeast(0)
-                student.arts += event.effects[2].toInt().coerceAtLeast(0)
-                student.sports += event.effects[3].toInt().coerceAtLeast(0)
+                student.literature = (student.literature + event.effects[0].toInt()).coerceIn(0, 10)
+                student.sciences = (student.sciences + event.effects[1].toInt()).coerceIn(0, 10)
+                student.arts = (student.arts + event.effects[2].toInt()).coerceIn(0, 10)
+                student.sports = (student.sports + event.effects[3].toInt()).coerceIn(0, 10)
 
                 val effect = BigDecimal(event.effects[4].toString())
-                student.GPA = (student.GPA.toBigDecimal() + effect).toDouble()
-                if (student.GPA > 4.0) student.GPA = 4.0
+                student.GPA = (student.GPA.toBigDecimal() + effect).toDouble().coerceAtMost(4.0)
                 if (student.GPA < 2.0) isOver = true
-                if (student.daysInSchool >= 20) isOver = true
+                if (student.daysInSchool >= 30) isOver = true
                 updateAttributes()
             }
         }
@@ -94,7 +93,6 @@ class SimulatorActivity : AppCompatActivity() {
         val events: List<GameEvent> = gameEvents.filter { gameEvent ->
             student.literature >= gameEvent.attribute[0] && student.sciences >= gameEvent.attribute[1] && student.sports >= gameEvent.attribute[2] && student.arts >= gameEvent.attribute[3]
         }
-        Log.d("debug-1", events.toString())
         val randomIndex = (events.indices).random()
         return events[randomIndex]
     }
@@ -108,7 +106,7 @@ class SimulatorActivity : AppCompatActivity() {
     }
 
     private fun navigateToFinal() {
-        val intent = Intent(this, FinalActivity::class.java) //TODO: 结算界面
+        val intent = Intent(this, FinalActivity::class.java)
         intent.putExtra("score", (student.literature+student.sciences+student.arts+student.sports)*student.GPA)
         startActivity(intent)
         finish()
