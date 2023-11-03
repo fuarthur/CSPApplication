@@ -1,6 +1,7 @@
 package com.ams.cspapplication.ui.enrollment
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -29,9 +30,12 @@ class EnrollmentActivity : AppCompatActivity() {
         continueButton = findViewById(R.id.continueButton)
 
         selectTemplate()
+        val mediaPlayer = MediaPlayer.create(this, R.raw.button_click)
+        mediaPlayer.setVolume(1.0f, 1.0f)
 
         // 设置按钮点击事件的监听器
         continueButton.setOnClickListener {
+            mediaPlayer.start()
             if (selectedOption == -1) {
                 Toast.makeText(this, "Please select an option", Toast.LENGTH_SHORT).show()
             } else {

@@ -1,6 +1,7 @@
 package com.ams.cspapplication.ui.simulator
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -56,11 +57,14 @@ class SimulatorActivity : AppCompatActivity() {
         gameEvents = gameEvents.filter { gameEvent ->
             gameEvent.conditions.contains(templateOption)
         }
-        Log.d("debug-0", gameEvents.toString())
+
+        val mediaPlayer = MediaPlayer.create(this, R.raw.button_click)
+        mediaPlayer.setVolume(1.0f, 1.0f)
 
         continueButton = findViewById(R.id.continueButton)
         continueButton.setOnClickListener {
-            if (isOver) { // TODO: 结算事件
+            mediaPlayer.start()
+            if (isOver) {
                 navigateToFinal()
             } else {
                 student.daysInSchool++

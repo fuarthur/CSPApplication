@@ -1,6 +1,7 @@
 package com.ams.cspapplication.ui.finalPage
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -23,8 +24,10 @@ class FinalActivity : ComponentActivity() {
         val resultText = getString(R.string.final_statement) + " " + university
         resultTextView.text = resultText
         restartButton = findViewById(R.id.restartButton)
-
+        val mediaPlayer = MediaPlayer.create(this, R.raw.button_click)
+        mediaPlayer.setVolume(1.0f, 1.0f)
         restartButton.setOnClickListener {
+            mediaPlayer.start()
             navigateToHomepage()
         }
     }
